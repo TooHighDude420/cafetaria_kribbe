@@ -9,21 +9,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <?php include "includes/index/links-index.inc.php" ?>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Cafetaria Kribbe</title>
 </head>
 
-<body>
+<body class="bg-[#07B0C1]">
     <header>
-        <?php include("includes/navbar.inc.php") ?>
+        <?php include "includes/navbar.inc.php" ?>
     </header>
     <main>
-        <?php include("includes/test.inc.php") ?>
+        <?php include "includes/$page.inc.php" ?>
     </main>
-    <footer>
-        <?php include("includes/footer.inc.php") ?>
-    </footer>
 </body>
 
 </html>
