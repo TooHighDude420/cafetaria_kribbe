@@ -1,4 +1,0 @@
-class bakset{
-    mandje = [];
-    
-}
