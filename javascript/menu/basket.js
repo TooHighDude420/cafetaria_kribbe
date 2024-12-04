@@ -1,5 +1,6 @@
 
 var cart = [];
+const cartContainer = document.getElementById("cartcontainer")
 
 function getCart(){
     return cart;
