@@ -6,11 +6,15 @@ function getCart(){
 }
 
 function resetCart() {
-    for (var i = 0 ; i < cart.length + 1 > 0; i++) {
-        cart.pop();
-    }
+    cart = [];
 }
 
 function addToCart(name, cost){
     cart.push([name, cost]);
+}
+
+function popCart(){
+    for (var i = 0; i < cart.length; i++){
+        
+    }
 }
