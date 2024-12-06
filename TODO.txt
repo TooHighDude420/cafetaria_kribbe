@@ -1,0 +1,4 @@
+print "<pre>";
+print "<p> cat van item: $i: </p>";
+print_r($cat);
+print "</pre>";

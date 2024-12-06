@@ -14,35 +14,26 @@ while (($data = fgetcsv($csv)) !== false) {
     $cat = $data_bet[$i][3];
 
     print "<pre>";
-    print "<p> menu item $i: </p>";
-    print_r($name);
-    print "<br>";
-    print_r($beschrijving);
-    print "<br>";
-    print_r($prijs);
-    print "</pre>";
-    
-
-    print "<pre>";
     print "<p> cat van item: $i: </p>";
-    print_r($cat);
+    print_r($data_bet);
     print "</pre>";
 
-    $sth = $conn->prepare("INSERT (`naam`, `beschrijving`, `prijs`, `categorie`, `image`) INTO `menu` VALUES (?, ?, ?, 2, null)");
-    $sth->bindParam("?", $name);
-    $sth->bindParam("?", $beschrijving);
-    $sth->bindParam("?", $prijs);
-    $sth->execute();
+    // try {
+    //     $catPush = $conn->prepare("INSERT INTO `categorien` (`categorie`) VALUE (:categorie)");
+    //     $catPush->bindParam(":categorie", $cat);
+    //     $catPush->execute();
+    // } catch(PDOException $e) {
+    //     echo "Connection failed: " . $e->getMessage();
+    // }
+
+    // $sth = $conn->prepare("INSERT (`naam`, `beschrijving`, `prijs`, `categorie`, `image`) INTO `menu` VALUES (?, ?, ?, 2, null)");
+    // $sth->bindParam("?", $name);
+    // $sth->bindParam("?", $beschrijving);
+    // $sth->bindParam("?", $prijs);
+    // $sth->execute();
 
     $i++;
 }
-
-print "<pre>";
-print "<p> menu items: </p>";
-print_r($data_bet);
-print "</pre>";
-
-
 
 try {
     // $title = $_POST['Title'];
