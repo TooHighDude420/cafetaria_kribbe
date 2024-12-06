@@ -15,6 +15,17 @@ print"<p> menu items: </p>";
 print_r($data_bet);
 print "</pre>";
 
+for ($i = 1; $i < $data_bet; $i++){
+    $name = $data_bet[$i][0];
+    print $name;
+    $beschrijving = $data_bet[$i][1];
+    print $beschrijving;
+    $prijs = $data_bet[$i][2];
+    print $prijs;
+    $cat = $data_bet[$i][3];
+    print $prijs;
+}
+
 
 try {
     // $title = $_POST['Title'];
