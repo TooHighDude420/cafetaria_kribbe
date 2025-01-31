@@ -2,8 +2,14 @@
 <html lang="en">
 
 <?php
+    $page = "";
     isset($_SESSION) ? : session_start();
-    isset($_GET['page']) ? $page = $_GET['page'] : $page = 'home';
+    if (isset($_GET['page'])){
+        $page = $_GET['page'];
+        $_SESSION['page'] = $page;
+    } else {
+        $page = 'home';
+    }
 ?>
 
 <head>
