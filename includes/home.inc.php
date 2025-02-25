@@ -3,7 +3,7 @@
         <h1>Welkom op Kribbe</h1>
     </div>
 
-    <div class="content pt-[20px]"> 
+    <div class="content pt-[20px]">
         Hier wil ik alle text en shit
     </div>
 

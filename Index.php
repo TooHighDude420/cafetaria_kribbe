@@ -2,6 +2,11 @@
 <html lang="en">
 
 <?php
+    require_once('autoLoad.php');
+
+    use App\Controllers\Menu;
+    $menu = new Menu();
+    
     $page = "";
     isset($_SESSION) ? : session_start();
     if (isset($_GET['page'])){
