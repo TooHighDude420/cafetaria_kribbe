@@ -9,6 +9,12 @@
             <p class="self-center text-5xl font-semibold whitespace-nowrap dark:text-[#07B0C1] freckle-face-regular">
                 Krib d'r niet genoeg van!</p>
         </div>
+        <div>
+            <form method="post" action="index.php?page=menu">
+                <input type="text" name="search">
+                <button type="submit">search</button>
+            </form>
+        </div>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
             <a href="index.php?page=menu" class="text-sm text-gray-500 dark:text-blue-500 hover:underline">
                 <button type="button"
@@ -21,32 +27,3 @@
         </div>
     </div>
 </nav>
-
-<?php
-if (isset($_GET['page'])) {
-    if ($_GET['page'] == "menu") {
-        echo "
-        <nav class='bg-gray-50 dark:bg-gray-700'>
-            <div class='max-w-screen-xl px-4 py-3 mx-auto'>
-                <div class='flex items-center'>
-                    <ul class='flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm'>
-                        <li>
-                            <a href='#' class='text-gray-900 dark:text-white hover:underline' aria-current='page'>Home</a>
-                        </li>
-                        <li>
-                            <a href='#' class='text-gray-900 dark:text-white hover:underline'>Company</a>
-                        </li>
-                        <li>
-                            <a href='#' class='text-gray-900 dark:text-white hover:underline'>Team</a>
-                        </li>
-                        <li>
-                            <a href='#' class='text-gray-900 dark:text-white hover:underline'>Features</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        ";
-    }
-}
-?>

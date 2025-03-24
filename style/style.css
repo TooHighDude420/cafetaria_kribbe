@@ -24,4 +24,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
-  
+
+.group:focus .group-focus\:flex {
+  display: flex;
+}

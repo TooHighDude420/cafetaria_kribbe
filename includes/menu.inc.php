@@ -1,23 +1,18 @@
-<?php
-    $full = $menu->getFullMenu();
-?>
+<div class="flex">
+    <div class='flex flex-wrap w-[100%] content-center gap-y-5 mt-5 justify-between'>
+        <?php
+        if (isset($_POST['search'])) {
+            $menu->getFilterdMenuAsItems($_POST['search']);
+        } else {
+            $menu->displayFullMenu();
+        }
 
-<div class='flex flex-wrap content-center gap-y-5 mt-5 justify-between'>
-    <div class='flex flex-col gap-y-5 block w-[70%] p-6 bg-[#F8F7F3] border border-gray-200 rounded-lg shadow ml-5'>
-        <?php 
-            for ($i = 0; $i < sizeof($full); $i++){
-            $array = $menu->getWrapperFromIndex($i);
-            echo $array;
-            }
-        ?>    
+        ?>
     </div>
 
-    <div class='flex flex-col gap-y-5 block w-[25%] p-6 bg-[#F8F7F3] border border-gray-200 rounded-lg shadow sticky top-0 max-h-[70vh] overflow-y-scroll mr-5' id='cartcontainer'>
-            
-    </div>
+    <div class='flex flex-col justify-between gap-y-5 block w-[20%] p-6 mt-5 bg-[#F8F7F3] border border-gray-200 rounded-lg shadow sticky top-5 max-h-[70vh] overflow-y-scroll mr-5'
+        id='cartcontainer'>
 
-    <div onclick="updateCart()" class="bg-white h-[25vh] w-[25vh]">
-            
     </div>
 </div>
 

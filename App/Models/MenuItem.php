@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-use PDO, PDOException;
 
 class MenuItem
 {
@@ -35,12 +34,10 @@ class MenuItem
         return $all;
     }
 
-    // <div onclick="addToCart(&quot;friet oorlog&quot;, &quot; pindas &quot; , &quot;4.50&quot;)" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-
-    public function gettWrapper()
+    public function getWrapper()
     {
         $wrapper = "
-            <div onclick='addToCart(&quot;$this->naam&quot;, &quot;$this->allergeen &quot;, &quot;$this->prijs&quot;)' class='block w-full p-6 bg-white border border-gray-200 rounded-lg shadow'>
+            <div onclick='addToCart([&quot;$this->naam&quot;, &quot;$this->allergeen&quot;, $this->prijs])' class='block w-full p-6 bg-white border border-gray-200 rounded-lg shadow'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900'>".$this->naam."</h5>
                 <p class='font-normal text-gray-700'>". $this->allergeen ."</p>
                 <p class='font-normal text-gray-700'>". $this->prijs ."</p>
@@ -48,5 +45,29 @@ class MenuItem
         ";
 
         return $wrapper;
+    }
+
+    function getCategorie(){
+        return $this->categorie;
+    }
+
+    function getNaam(){
+        return $this->naam;
+    }
+
+    function getID(){
+        return $this->menuItemID;
+    }
+
+    function getPrijs(){
+        return $this->prijs;
+    }
+
+    function getPath(){
+        return $this->imgPath;
+    }
+
+    function getAllergeen(){
+        return $this->allergeen;
     }
 }

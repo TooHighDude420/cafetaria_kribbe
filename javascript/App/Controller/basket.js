@@ -1,25 +1,23 @@
+const shoppingList = document.getElementById("cartcontainer");
+
 var cart = new ShoppingCart();
-cart.addToCard(new MenuItems('naam', 'allergeen', 'path', 'categorie', 10));
-cart.removeFromCart(0);
-var testRes = cart.getCart();
 
-// Listening for the custom event
-document.addEventListener('added', () => {
-  console.log('Custom added triggered');
-});
+if (sessionStorage.getItem('shoppingCart') != null) {
+    cart.loadCart();
+    updateCart();
+}
 
-document.addEventListener('removed', () => {
-    console.log('Custom removed triggered');
-});
 
-function addToCart(value){
+function addToCart(value) {
     cart.addToCard(value);
+    this.updateCart();
 }
 
-function removeFromCart(index){
+function removeFromCart(index) {
     cart.removeFromCart(index);
+    this.updateCart();
 }
 
-function updateCart(){
-    
+function updateCart() {
+    shoppingList.innerHTML = cart.updateCart();
 }
