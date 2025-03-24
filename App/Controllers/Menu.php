@@ -60,7 +60,7 @@ class Menu
 
     public function getFilterdMenuAsItems($searchString)
     {
-        $search = $searchString . "%";
+        $search = "%" . $searchString . "%";
         $results = $this->connection->getFiltertResults($search);
         foreach ($results as $r) {
             array_push($this->filterdResultsAsItems, $this->newItem($r));
