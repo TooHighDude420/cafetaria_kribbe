@@ -4,6 +4,9 @@
   font-style: normal;
 }
 
+/* style for custom element */
+
+
 ::-webkit-scrollbar {
   width: 10px;
 }

@@ -24,6 +24,10 @@
                 <button type="button"
                     class="text-orange-700 hover:text-white border border-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-orange-500 dark:text-orange-500 dark:hover:text-white dark:hover:bg-orange-500 dark:focus:ring-orange-800">Login</button>
             </a>
+            <a href="index.php?page=contact" class="text-sm  text-gray-500 dark:text-blue-500 hover:underline">
+                <button type="button"
+                    class="text-orange-700 hover:text-white border border-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-orange-500 dark:text-orange-500 dark:hover:text-white dark:hover:bg-orange-500 dark:focus:ring-orange-800">contact</button>
+            </a>
         </div>
     </div>
 </nav>

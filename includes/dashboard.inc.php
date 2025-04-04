@@ -1,9 +1,9 @@
 <?php
-if (isset($_COOKIE['loggedIn']) == false) {
+if (isset($_SESSION['loggedIn']) == false) {
     header("location: index.php?page=home");
 }
 
-$username = $_COOKIE['username'];
+$username = $_SESSION['username'];
 
 $array = [
     'Home' => 'home',
