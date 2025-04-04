@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     require_once "../App/Controllers/Connection.php";
     require_once "../App/Models/Conn.php";
 
@@ -16,9 +18,9 @@
     } else {
         if(password_verify($password, $results[0]['password'])){
             echo "login succesfull";
-            setcookie("loggedIn", true, 0 ,"/");
-            setcookie("username", $username, 0 ,"/");
-            setcookie("role", $results[0]['role'], 0 ,"/");
+            $_SESSION["loggedIn"] = true;
+            $_SESSION["username"] = $username;
+            $_SESSION["role"] = $results[0]['role'];
 
             header("location:../index.php?page=dashboard");
         } else {
