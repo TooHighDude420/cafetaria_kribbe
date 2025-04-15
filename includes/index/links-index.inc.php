@@ -5,4 +5,4 @@
 <!-- fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Princess+Sofia&display=swap" rel="stylesheet">
 <!-- tailwind cdn -->
-<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<script src="https://unpkg.com/@tailwindcss/browser@4" type="style"></script>

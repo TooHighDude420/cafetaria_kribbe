@@ -55,7 +55,6 @@ class contactForm extends HTMLElement {
     this.setAtributes();
     // Create a shadow root
     const shadow = this.attachShadow({ mode: "open" });
-
     const section = document.createElement("section");
     section.setAttribute("style", `display: flex; justify-content: center;`);
 
